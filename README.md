@@ -1,1 +1,3 @@
-# CIFAR10_GAN_v1
+# CIFAR10 Generative Adversarial Network
+
+This code implements a GAN using the CIFAR-10 dataset to generate images, specifically focusing on class 8 (ships). The generator and discriminator models were built using Keras, with the generator taking random noise as input and producing 32x32 images, while the discriminator classifies real and generated images. During training, the discriminator alternates between real and fake image batches to learn better classification, while the generator improves based on the discriminator's feedback. To handle process interruptions (like zsh killing long-running jobs), we added checkpoints that save model weights every 1000 epochs, allowing training to resume from the last saved point, crucial given that each interval took roughly two hours to complete.
